@@ -16,7 +16,7 @@ router.get('/:id', ash(async(req, res) => {
     res.status(200).json(employee);
 }));
 
-//Route to edit an employee 
+//Route to edit an Employee 
 router.put('/:id', ash (async(req, res) => {
     await employee.update(req.body, {
         where: {id: req.params.id}

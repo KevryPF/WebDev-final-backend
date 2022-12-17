@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const dummyRouter = require('./dummy');
-router.use('/dummy', dummyRouter);
+const taskRouter = require('./tasks');
+const employeeRouter = require('./employees');
 
-const ash = require('express-async-handler');
+router.use('/employee', employeeRouter);
+router.use('/task', taskRouter);
 
 module.exports = router;

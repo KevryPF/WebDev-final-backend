@@ -27,7 +27,7 @@ const configureApp = async () => {
     app.get('/favicon.ico', (req, res) => res.status(204));
 
     app.get("/hello", (request, response) => {
-        response.send
+        response.send("hello world!");
     })
 
     app.use("/api", apiRouter);
@@ -43,7 +43,7 @@ const configureApp = async () => {
     app.use((err, req, res, next) => {
         console.error(err);
         console.log(req.originalUrl);
-        res.status(err.status || 500).send(err.messagew || "Internal server error.");
+        res.status(err.status || 500).send(err.message || "Internal server error.");
     });
 
 };

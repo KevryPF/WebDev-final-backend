@@ -32,4 +32,13 @@ router.post('/', function(req, res, next) {
     .catch(err => next(err));
 });
 
+//Route to delete a task
+router.delete('/:id', function(req, res, next) {
+    Task.destroy({
+        where: { id: req.params.id }
+    })
+        .then(() => res.status(200).json("Deleted a Task"))
+        .catch(err => next(err));
+});
+
 module.exports = router;

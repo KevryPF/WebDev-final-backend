@@ -18,7 +18,7 @@ router.get('/:id', ash(async(req, res) => {
 
 //Route to edit a task 
 router.put('/:id', ash(async(req, res) => {
-    await task.update(req.body, {
+    await Task.update(req.body, {
         where: {id: req.params.id}
     });
     let task = await Task.findByPk(req.params.id);

@@ -1,6 +1,6 @@
 const dbName = 'final-employee-management-backend';
 const dbUser = 'postgres';
-const dbPwd = 'admin123';
+const dbPwd = '';
 
 module.exports = {
     dbName,
